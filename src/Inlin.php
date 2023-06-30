@@ -13,6 +13,7 @@ namespace aelvan\inlin;
 use craft\base\Plugin;
 use aelvan\inlin\variables\InlinVariable;
 use craft\web\twig\variables\CraftVariable;
+use craft\base\Model;
 
 use yii\base\Event;
 
@@ -34,7 +35,7 @@ class Inlin extends Plugin
         });
     }
 
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?Model
     {
         return new \aelvan\inlin\models\Settings();
     }
